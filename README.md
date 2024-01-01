@@ -43,18 +43,19 @@ List any prerequisites that users need to have installed before they can use you
 
 2. Navigate to the project directory:
 
-````bash
+```bash
 cd your-project
+```
 
 3. Install dependencies:
 
 ```bash
 npm install
+```
 
 2. Start the development server:
-
 
 ```bash
 npm start
 
-````
+```
