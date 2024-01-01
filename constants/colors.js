@@ -1,11 +1,19 @@
-const primary = "#000";
-const secondary = "#E97400";
-const muted = "#3A3A47";
-export const colors = {
-  primary,
-  secondary,
-  red: "#EF0C0C",
-  muted,
-  border: "#E6E6E6",
-  white: "#FFFFFF",
+const tintColorLight = "#E97400";
+const tintColorDark = "#fff";
+
+export default {
+  light: {
+    text: "#000",
+    background: "#fff",
+    tint: tintColorLight,
+    tabIconDefault: "#3A3A47",
+    tabIconSelected: tintColorLight,
+  },
+  dark: {
+    text: "#fff",
+    background: "#000",
+    tint: tintColorDark,
+    tabIconDefault: "#3A3A47",
+    tabIconSelected: tintColorDark,
+  },
 };

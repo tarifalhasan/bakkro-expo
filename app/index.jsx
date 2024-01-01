@@ -1,3 +1,4 @@
+import { Link } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import {
   Image,
@@ -83,22 +84,24 @@ export default function Page() {
                 paddingTop: hp(5),
               }}
             >
-              <TouchableOpacity
-                className="w-full bg-skin-primary flex items-center rounded-10"
-                style={{
-                  paddingVertical: hp(2),
-                  paddingHorizontal: hp(1.9),
-                }}
-              >
-                <Text
+              <Link asChild href={"/home"}>
+                <TouchableOpacity
+                  className="w-full bg-skin-primary flex items-center rounded-10"
                   style={{
-                    fontSize: hp(1.8),
+                    paddingVertical: hp(2),
+                    paddingHorizontal: hp(1.9),
                   }}
-                  className="text-white font-bold "
                 >
-                  Continuer
-                </Text>
-              </TouchableOpacity>
+                  <Text
+                    style={{
+                      fontSize: hp(1.8),
+                    }}
+                    className="text-white font-bold "
+                  >
+                    Continuer
+                  </Text>
+                </TouchableOpacity>
+              </Link>
             </View>
           </View>
         </ScrollView>
