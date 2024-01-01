@@ -22,7 +22,7 @@ const HouseCard = ({ image, title, description, key }) => {
       </View>
       <View
         style={{
-          paddingLeft: hp(0.8),
+          paddingHorizontal: hp(0.8),
           paddingBottom: hp(1),
         }}
         className="border rounded-b-md border-t-0 border-skin-border"

@@ -13,7 +13,11 @@ export default function _layout() {
         tabBarInactiveTintColor: "#3A3A47",
         tabBarStyle: {
           height: hp(8),
-          paddingTop: hp(2),
+          paddingTop: hp(3),
+          paddingBottom: hp(1.5),
+        },
+        tabBarIconStyle: {
+          paddingTop: hp(1),
         },
       }}
     >
