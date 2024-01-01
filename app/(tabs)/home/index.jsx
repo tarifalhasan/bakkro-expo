@@ -1,20 +1,19 @@
 import React from "react";
-import { Image, ScrollView, Text, View } from "react-native";
+import { FlatList, Image, ScrollView, Text, View } from "react-native";
 import { OutlineButton, PrimaryButton } from "../../../components/button";
 import HomeBannerCard from "../../../components/home/HomeBannerCard";
+import HouseCard from "../../../components/shared/HouseCard";
+import { HomeSlidesData } from "../../../constants/homeSlides";
 import hp from "../../../lib/ResponsiveHeight";
 
 const Home = () => {
   return (
     <ScrollView
-      style={{
-        paddingHorizontal: hp(2),
-      }}
       className="flex-1 bg-white"
       showsVerticalScrollIndicator={false}
     >
       <View
-        style={{ paddingVertical: hp(5) }}
+        style={{ paddingVertical: hp(5), paddingHorizontal: hp(2) }}
         className="flex-row items-start justify-between"
       >
         <View>
@@ -56,12 +55,49 @@ const Home = () => {
           </View>
         </View>
       </View>
-      <View className="flex-row  space-x-4  justify-between">
+      <View
+        style={{
+          paddingHorizontal: hp(2),
+        }}
+        className="flex-row  space-x-4  justify-between"
+      >
         <PrimaryButton btnStyle={"flex-1"} title={"Find accommodation"} />
         <OutlineButton btnStyle={"flex-1"} title={"Purchase/Rental"} />
       </View>
+      <View
+        style={{
+          paddingHorizontal: hp(2),
+        }}
+      >
+        <HomeBannerCard />
+      </View>
 
-      <HomeBannerCard />
+      <View
+        style={{
+          paddingTop: hp(3),
+          paddingBottom: hp(3),
+        }}
+      >
+        <FlatList
+          data={HomeSlidesData}
+          renderItem={({ item }) => (
+            <HouseCard
+              title={item.title}
+              image={item.image}
+              description={item.description}
+            />
+          )}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          keyExtractor={(item) => item.id}
+          ItemSeparatorComponent={() => <View style={{ width: 16 }} />} // Adjust the width as needed
+          identifier
+          contentContainerStyle={{
+            marginLeft: hp(2),
+            paddingRight: hp(4),
+          }}
+        />
+      </View>
     </ScrollView>
   );
 };

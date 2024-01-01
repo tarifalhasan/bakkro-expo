@@ -5,7 +5,7 @@ import hp from "../lib/ResponsiveHeight";
 export const PrimaryButton = ({ title, btnStyle, ...props }) => {
   return (
     <TouchableOpacity
-      className={` ${btnStyle} bg-skin-primary flex-row justify-center items-center rounded-10 `}
+      className={` ${btnStyle} bg-skin-primary flex-row justify-center items-center rounded-md `}
       style={{
         height: hp(6),
       }}
@@ -36,7 +36,7 @@ export const OutlineButton = ({ title, btnStyle, ...props }) => {
           fontSize: hp(1.8),
           color: "#E97400",
         }}
-        className=" font-bold "
+        className=" font-bold  "
       >
         {title}
       </Text>
