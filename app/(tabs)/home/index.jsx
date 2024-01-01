@@ -1,6 +1,7 @@
 import React from "react";
 import { Image, ScrollView, Text, View } from "react-native";
 import { OutlineButton, PrimaryButton } from "../../../components/button";
+import HomeBannerCard from "../../../components/home/HomeBannerCard";
 import hp from "../../../lib/ResponsiveHeight";
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
         paddingHorizontal: hp(2),
       }}
       className="flex-1 bg-white"
+      showsVerticalScrollIndicator={false}
     >
       <View
         style={{ paddingVertical: hp(5) }}
@@ -58,6 +60,8 @@ const Home = () => {
         <PrimaryButton btnStyle={"flex-1"} title={"Find accommodation"} />
         <OutlineButton btnStyle={"flex-1"} title={"Purchase/Rental"} />
       </View>
+
+      <HomeBannerCard />
     </ScrollView>
   );
 };

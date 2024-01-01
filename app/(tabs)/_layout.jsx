@@ -1,4 +1,3 @@
-import { AntDesign, FontAwesome5 } from "@expo/vector-icons";
 import { Tabs } from "expo-router/tabs";
 import { Image, useColorScheme } from "react-native";
 import colors from "../../constants/colors";
@@ -23,7 +22,15 @@ export default function _layout() {
         options={{
           tabBarLabel: "Home",
           tabBarIcon: ({ color }) => (
-            <AntDesign name="home" size={hp(3.5)} color={color} />
+            <Image
+              style={{
+                width: hp(3),
+                height: hp(3),
+                objectFit: "contain",
+                tintColor: color,
+              }}
+              source={require("../../assets/tabs/Home.png")}
+            />
           ),
           tabBarLabelStyle: {
             fontSize: hp(1.8),
@@ -36,7 +43,15 @@ export default function _layout() {
         options={{
           tabBarLabel: "Search",
           tabBarIcon: ({ color }) => (
-            <AntDesign name="search1" size={hp(3.5)} color={color} />
+            <Image
+              style={{
+                width: hp(3),
+                height: hp(3),
+                objectFit: "contain",
+                tintColor: color,
+              }}
+              source={require("../../assets/tabs/Search.png")}
+            />
           ),
           tabBarLabelStyle: {
             fontSize: hp(1.8),
@@ -49,7 +64,15 @@ export default function _layout() {
         options={{
           tabBarLabel: "Favorite",
           tabBarIcon: ({ color }) => (
-            <AntDesign name="hearto" size={hp(3.5)} color={color} />
+            <Image
+              style={{
+                width: hp(3),
+                height: hp(3),
+                objectFit: "contain",
+                tintColor: color,
+              }}
+              source={require("../../assets/tabs/Heart.png")}
+            />
           ),
           tabBarLabelStyle: {
             fontSize: hp(1.8),
@@ -83,7 +106,15 @@ export default function _layout() {
         options={{
           tabBarLabel: "Account",
           tabBarIcon: ({ color }) => (
-            <FontAwesome5 name="user" size={24} color={color} />
+            <Image
+              style={{
+                width: hp(3),
+                height: hp(3),
+                objectFit: "contain",
+                tintColor: color,
+              }}
+              source={require("../../assets/tabs/user.png")}
+            />
           ),
           tabBarLabelStyle: {
             fontSize: hp(1.8),
